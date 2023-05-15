@@ -1,4 +1,3 @@
-
 import './js/isChangeTheme';
 import './js/list_of_categories';
 import './js/support_ukraine';
