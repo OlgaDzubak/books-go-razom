@@ -6,6 +6,9 @@ const categoryListBox = document.querySelector(".category-list-box");
 //const URL = 'https://books-backend.p.goit.global/books/category-list';
 const booksApi = new booksAPI();
 getCategories();
+console.log("Конец list_of_categories.js");
+
+
 
 async function getCategories(){
     try {

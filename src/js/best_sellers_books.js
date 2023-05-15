@@ -11,6 +11,8 @@ console.log(list);
 list.addEventListener('click', loadMore);
 const fetchBooks = new booksAPI();
 
+
+console.log("Начало Best_sellesr_books.js");
 // Функція для розмітки бест бук
 function createMarcup(arr, querty) {
 
@@ -128,6 +130,6 @@ function lastBlueWord(string) {
     const firstWord = arrWord.splice(0, arrWord.length - 1);
     return `${firstWord.join(' ')} <span class="last-word-color">${arrWord.join('')}</span>`
 }
-    
+console.log("Конец  Best_sellesr_books.js");    
     
 
