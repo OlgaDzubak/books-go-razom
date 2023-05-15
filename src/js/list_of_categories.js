@@ -1,41 +1,34 @@
-import axios from 'axios';
-
+import { booksAPI } from "./booksAPI";
 
 const categoryListBox = document.querySelector(".category-list-box");
-const categoryNames = document.querySelectorAll(".category-list-item");
-//const checkBoxEl = document.querySelector('#theme-switch-toggle');
-const URL = 'https://books-backend.p.goit.global/books/category-list';
+//const categoryNames = document.querySelectorAll(".category-list-item");
+//const URL = 'https://books-backend.p.goit.global/books/category-list';
+const booksApi = new booksAPI();
+getCategories();
 
-
-
-// Функція запиту на отримання назв категорій від бекенду
-let response = [];
-async function fetchCategoryList() {
+async function getCategories(){
     try {
-        response = await axios.get(`${URL}`);
-            return [];
-    } catch (error) {
+        const response = await booksApi.getCategoryList();  
+        console.log("response = ",response);
+        if (response.data === 0){ return Notify.failure("Sorry, there are no book with that ID");  }
+        categoryListBox.innerHTML = createCategoryList(response.data);
+    }catch(error) {                           
         console.log(error);
-        return [];
     }
 }
 
 // Формування списку категорій
-function createCategoryList() {
+function createCategoryList(data) {
+    console.log("data=",data);
     let categoryListHTML = `<h3 id="category-list-title" class="category-list-item">All categories</h3>`;
-    response.data.forEach(category => {
+    data.forEach(category => {
         const categoryLink = `<p id="${category.list_name}" class="category-list-item">${category.list_name}</p>`;
         categoryListHTML += categoryLink;
     });
     return categoryListHTML;
 };
 
-// Відправлення запиту і формування списку під час завантаження сторінки 
-const getCategoryList = async () => {
-    let data = await fetchCategoryList();
-    categoryListBox.innerHTML = createCategoryList(data);
-};
-getCategoryList();
+
 
 // // Зміни стилів у списку під час вибору категорії (для світлої і темної тем дизайну)
 // categoryListBox.addEventListener("click", choosingCategory);
