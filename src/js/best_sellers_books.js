@@ -6,9 +6,9 @@ import { booksAPI } from './booksAPI';
 //import ...
 
 // Змінна що зберігає дів куди добавляти розмітку
-const list = document.querySelector('.homepage-books')
+const list = document.querySelector('.homepage-books');
 console.log(list);
-list.addEventListener('click', loadMore)
+list.addEventListener('click', loadMore);
 const fetchBooks = new booksAPI();
 
 // Функція для розмітки бест бук
@@ -64,7 +64,7 @@ async function createBestBook() {
 }
 
 // Виклик даної функції для промальовки всього при завантажені сторінки
-createBestBook()
+createBestBook();
 
 // Функція для розмітки книг за категорією
 function createMarcupCategoryBook(arr) {

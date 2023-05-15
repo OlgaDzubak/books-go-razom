@@ -136,7 +136,7 @@ function removeLocalStorage() {
     const arrLs = JSON.parse(dataJson);
     let i = arrLs.indexOf(book_Id);
     arrLs.splice(i, 1);
-    localStorage.removeItem('key')
+    localStorage.removeItem('key');
     localStorage.setItem('key', JSON.stringify(arrLs));
 };
 //commit
