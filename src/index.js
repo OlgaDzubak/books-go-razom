@@ -1,12 +1,7 @@
-console.log("./js/isChangeTheme");
 import './js/isChangeTheme';
-
-console.log("./js/list_of_categories");
-
 import './js/list_of_categories';
 import './js/support_ukraine';
 import './js/best_sellers_books';
-
 import './js/autorization_modal_window';
 import './js/book_modal_window';
 import './js/mobile_menu';
