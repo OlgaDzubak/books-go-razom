@@ -2,12 +2,11 @@ import { booksAPI } from "./booksAPI";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const categoryListBox = document.querySelector(".category-list-box");
-//const categoryNames = document.querySelectorAll(".category-list-item");
+const categoryNames = document.querySelectorAll(".category-list-item");
 //const URL = 'https://books-backend.p.goit.global/books/category-list';
 const booksApi = new booksAPI();
 getCategories();
 console.log("Конец list_of_categories.js");
-
 
 
 async function getCategories(){
@@ -35,7 +34,7 @@ function createCategoryList(data) {
 
 
 // // Зміни стилів у списку під час вибору категорії (для світлої і темної тем дизайну)
-// categoryListBox.addEventListener("click", choosingCategory);
+//  categoryListBox.addEventListener("click", choosingCategory);
 // function choosingCategory(event) {
 //     if (localStorage.getItem('theme') === 'dark') {
 //         categoryNames.forEach(name => {

@@ -43,6 +43,13 @@
     margin-bottom: 32px;
     white-space: nowrap;
 }
+.category-list-item:hover,
+.category-list-item:focus{
+    color: var(--accent-color1);
+    text-transform: uppercase;
+
+}
+
 
 .homepage-books {
     padding-top: 40px;
