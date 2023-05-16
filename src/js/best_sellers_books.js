@@ -6,13 +6,11 @@ import { booksAPI } from './booksAPI';
 //import ...
 
 // Змінна що зберігає дів куди добавляти розмітку
-const list = document.querySelector('.homepage-books');
+const list = document.querySelector('.homepage-books')
 console.log(list);
-list.addEventListener('click', loadMore);
+list.addEventListener('click', loadMore)
 const fetchBooks = new booksAPI();
 
-
-console.log("Начало Best_sellesr_books.js");
 // Функція для розмітки бест бук
 function createMarcup(arr, querty) {
 
@@ -66,7 +64,7 @@ async function createBestBook() {
 }
 
 // Виклик даної функції для промальовки всього при завантажені сторінки
-createBestBook();
+createBestBook()
 
 // Функція для розмітки книг за категорією
 function createMarcupCategoryBook(arr) {
@@ -130,6 +128,6 @@ function lastBlueWord(string) {
     const firstWord = arrWord.splice(0, arrWord.length - 1);
     return `${firstWord.join(' ')} <span class="last-word-color">${arrWord.join('')}</span>`
 }
-console.log("Конец Best_sellesr_books.js");    
+    
     
 

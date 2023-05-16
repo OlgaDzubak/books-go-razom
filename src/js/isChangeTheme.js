@@ -10,9 +10,9 @@ checkBoxEl.addEventListener('change', (event) => {
     localStorage.removeItem('theme');
     }
     else {
-    localStorage.setItem('theme', 'dark');
+    localStorage.setItem('theme', 'dark')
     }
-    addDarkClassToHTML();
+    addDarkClassToHTML()
     });
 
   // // фукція при умові наявності в локал сторадж темної теми додає класи темної теми,
